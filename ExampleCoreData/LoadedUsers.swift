@@ -68,14 +68,10 @@ class Users {
                         
                         
                           let decoder = JSONDecoder()
-                          decoder.dateDecodingStrategy = .iso8601
                     
                         
                         if let decodedUsers = try? decoder.decode([LoadedUser].self, from: userData) {
                                 completion(decodedUsers)
-                            
-//                                users = decodedUsers
-
                         }
                         
                         

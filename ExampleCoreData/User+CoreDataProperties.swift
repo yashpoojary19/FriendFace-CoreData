@@ -43,6 +43,10 @@ extension User {
         isActive
     }
     
+    public var checkIsActive: String {
+        return isActive ? "🟢" :"🔴"
+    }
+    
     public var friendsArray: [Friend] {
         let set = friends as? Set<Friend> ?? []
         return set.sorted { $0.name! < $1.name!}
